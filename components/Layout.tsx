@@ -1,13 +1,14 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
-  children?: ReactNode
-  title?: string
-}
+  children?: React.ReactNode;
+  title?: string;
+};
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => (
+const Layout = ({ children, title = "This is the default title" }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -16,26 +17,39 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <header>
       <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
+        <div className="logo">
+          <Image src="/assets/icons/logo.svg" width={71} height={39} />
+        </div>
+        <div className="nav-links">
+          <Link href="/shop">Shop</Link>
+          <Link href="/collective">Collective</Link>
+          <Link href="/designers">Designers</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/contact">Contact</Link>
+        </div>
+
+        <div className="nav-icon-links">
+          {/* <div className="nav-icon-links__left"> */}
+          <div className="nav-icon nav-menu">
+            <Image src="/assets/icons/menu.svg" width={24} height={24} />
+          </div>
+          <div className="nav-icon nav-search">
+            <Image src="/assets/icons/search.svg" width={24} height={24} />
+          </div>
+          <div className="nav-icon">
+            <div className="nav-icon__divider"></div>
+          </div>
+          {/* </div> */}
+          {/* <div className="nav-icon-links__right"> */}
+          <div className="nav-icon nav-cart">
+            <Image src="/assets/icons/cart.svg" width={24} height={24} />
+          </div>
+          {/* </div> */}
+        </div>
       </nav>
     </header>
     {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
   </div>
-)
+);
 
-export default Layout
+export default Layout;
