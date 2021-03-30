@@ -11,12 +11,16 @@ nav {
 .product-page {
   max-width: 90%;
   margin: 0 auto;
-  overflow: hidden;
   padding-top: 1.5rem;
-  // border: 1px solid orange;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 20rem;
   grid-row-gap: 0px;
+
+  @media (max-width: 540px) {
+    display: flex;
+    margin-bottom: 2rem;
+    flex-direction: column-reverse;
+  }
 }

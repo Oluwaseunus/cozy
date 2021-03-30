@@ -6,6 +6,10 @@
   display: flex;
   align-items: center;
 
+  @media (max-width: 540px) {
+    display: none;
+  }
+
   a {
     color: $dark;
     text-transform: uppercase;
@@ -55,7 +59,7 @@
   margin: auto;
 
   .back-button {
-    margin: 6rem 0 4rem;
+    margin: 4rem 0;
   }
 
   &__right {
@@ -93,6 +97,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media (max-width: 540px) {
+    margin-bottom: 5rem;
+  }
 }
 
 button {
@@ -272,6 +280,10 @@ button {
   &__notes {
     font-size: 1.4rem;
     margin-bottom: 8.8rem;
+
+    @media (max-width: 540px) {
+      margin-bottom: 5rem;
+    }
   }
 }
 
@@ -302,11 +314,13 @@ button {
 
 .preview {
   display: flex;
+  position: relative;
+  align-items: flex-end;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
 
   .colored-background {
+    position: absolute;
     width: 44rem;
     height: 25rem;
     background: linear-gradient(
@@ -315,19 +329,24 @@ button {
       rgba(75, 135, 133, 0) 99.85%
     );
     opacity: 0.1;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    top: 7%;
+    right: -15%;
+
+    @media (max-width: 1024px) {
+      top: 5%;
+    }
   }
 
   &__product {
-    @include flex-center;
     position: absolute;
     width: 87rem;
-    height: 55rem;
-    margin-right: -10rem;
-    margin-top: -12rem;
+    height: 100%;
+    top: -11rem;
+    right: -10rem;
+
+    @media (max-width: 1024px) {
+      width: 80rem;
+    }
   }
 
   &__options {
