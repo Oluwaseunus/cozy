@@ -24,3 +24,13 @@ nav {
     flex-direction: column-reverse;
   }
 }
+
+.cart__page {
+  max-width: 90%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: 41fr 19fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 8rem;
+  grid-row-gap: 0px;
+}

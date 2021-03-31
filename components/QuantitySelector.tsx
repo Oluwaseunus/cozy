@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { QuantitySelectorProps } from '../interfaces';
 
 const QuantitySelector = ({ value, onChange }: QuantitySelectorProps) => {
@@ -20,14 +21,18 @@ const QuantitySelector = ({ value, onChange }: QuantitySelectorProps) => {
 
   return (
     <div className='quantity-selector'>
-      <button onClick={decrement}> - </button>
+      <button onClick={decrement}>
+        <Image src='/assets/icons/minus.svg' width={20} height={20} />
+      </button>
       <input
         type='number'
         value={state}
         name='quantity'
         id='product_quantity'
       />
-      <button onClick={increment}> + </button>
+      <button onClick={increment}>
+        <Image src='/assets/icons/plus.svg' width={20} height={20} />
+      </button>
     </div>
   );
 };
