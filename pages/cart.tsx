@@ -14,11 +14,12 @@ const CartPage = () => {
           </div>
           <div className='cart__items'>
             <div className='cart__item'>
-              <div className='card__item-picture'>
+              <div className='cart__item-picture'>
                 <Image
                   src='/assets/images/osmond_armchair.png'
                   width={160}
                   height={160}
+                  objectFit='contain'
                 />
               </div>
               <div className='cart__item-details'>
@@ -38,11 +39,12 @@ const CartPage = () => {
             </div>
             <div className='divider'></div>
             <div className='cart__item'>
-              <div className='card__item-picture'>
+              <div className='cart__item-picture'>
                 <Image
                   src='/assets/images/Rectangle 2.png'
                   width={160}
                   height={160}
+                  objectFit='contain'
                 />
               </div>
               <div className='cart__item-details'>

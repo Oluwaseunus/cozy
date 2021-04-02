@@ -385,6 +385,10 @@ button {
 .cart__page {
   & > div {
     margin-top: 7.2rem;
+
+    @media (max-width: 1024px) {
+      margin-top: 5rem;
+    }
   }
 
   &-left {
@@ -436,7 +440,6 @@ button {
 }
 
 .cart__item {
-  width: 82rem;
   height: 16rem;
   display: flex;
   position: relative;
