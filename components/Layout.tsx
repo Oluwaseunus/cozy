@@ -25,11 +25,11 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
           </a>
         </Link>
         <div className='nav-links'>
-          <Link href='/shop'>Shop</Link>
-          <Link href='/collective'>Collective</Link>
-          <Link href='/designers'>Designers</Link>
-          <Link href='/about'>About Us</Link>
-          <Link href='/contact'>Contact</Link>
+          <p>Shop</p>
+          <p>Collective</p>
+          <p>Designers</p>
+          <p>About Us</p>
+          <p>Contact</p>
         </div>
 
         <div className='nav-icon-links'>
