@@ -16,9 +16,10 @@ const CartPage = () => {
             <div className='cart__item'>
               <div className='cart__item-picture'>
                 <Image
-                  src='/assets/images/osmond_armchair.png'
+                  src='/assets/images/osmond_armchair.jpeg'
                   width={160}
                   height={160}
+                  quality={100}
                   objectFit='contain'
                 />
               </div>
@@ -41,9 +42,10 @@ const CartPage = () => {
             <div className='cart__item'>
               <div className='cart__item-picture'>
                 <Image
-                  src='/assets/images/Rectangle 2.png'
+                  src='/assets/images/Meryl_Lounge_Chair_Teal_LP.jpeg'
                   width={160}
                   height={160}
+                  quality={100}
                   objectFit='contain'
                 />
               </div>

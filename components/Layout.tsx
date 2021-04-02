@@ -17,9 +17,13 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <header>
       <nav>
-        <div className='logo'>
-          <Image src='/assets/icons/logo.svg' width={71} height={39} />
-        </div>
+        <Link href='/'>
+          <a>
+            <div className='logo'>
+              <Image src='/assets/icons/logo.svg' width={71} height={39} />
+            </div>
+          </a>
+        </Link>
         <div className='nav-links'>
           <Link href='/shop'>Shop</Link>
           <Link href='/collective'>Collective</Link>
