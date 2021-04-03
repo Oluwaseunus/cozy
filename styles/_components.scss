@@ -114,6 +114,10 @@ button {
   display: inline-block;
   text-transform: uppercase;
 
+  &:focus {
+    outline: none;
+  }
+
   &.danger {
     color: $red;
   }
@@ -421,6 +425,12 @@ button {
     font-size: 1.6rem;
     line-height: 1.6rem;
     border: 1px solid rgba($dark, 0.2);
+
+    @media (max-width: 1024px) {
+      width: 45rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
@@ -437,6 +447,11 @@ button {
   height: 1px;
   background: $dark;
   opacity: 0.2;
+
+  &.horizontal {
+    width: 1px;
+    height: 100%;
+  }
 }
 
 .cart__item {
@@ -581,5 +596,120 @@ button {
 
   & + button {
     width: 100%;
+  }
+}
+
+.checkout__page {
+  &-routes {
+    display: flex;
+    align-items: center;
+
+    :not(:last-child) {
+      margin-right: 3rem;
+
+      @media (max-width: 375px) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &-chevron img {
+    opacity: 0.2;
+  }
+
+  &-route {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 2.4rem;
+    position: relative;
+    line-height: 2.4rem;
+    color: rgba($dark, 0.2);
+
+    &.active {
+      color: $dark;
+    }
+  }
+}
+
+.address__page {
+  margin-top: 7.2rem;
+
+  .new__address {
+    margin-top: 3.2rem;
+
+    &-button {
+      color: $green;
+      font-weight: 600;
+      width: fit-content;
+      height: fit-content;
+      line-height: 1.6rem;
+    }
+  }
+}
+
+.address__item {
+  display: flex;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 6.5rem;
+
+  &:nth-of-type(2) {
+    margin-bottom: 3.2rem;
+  }
+
+  &-details {
+    margin-right: auto;
+  }
+
+  &-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.4rem;
+  }
+
+  &-name {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin-right: 1.6rem;
+  }
+
+  &-badge {
+    color: $green;
+    font-weight: 600;
+    padding: 6px 8px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    line-height: 1.2rem;
+    border: 1px solid $green;
+    text-transform: uppercase;
+  }
+
+  &-location {
+    margin-bottom: 1rem;
+  }
+
+  &-contact {
+    color: $green;
+
+    &-number {
+      color: $dark;
+      margin-left: 1.2rem;
+    }
+  }
+
+  &-actions {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+
+    button {
+      width: fit-content;
+      padding: 0 2.4rem;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
   }
 }

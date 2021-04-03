@@ -1,15 +1,26 @@
-// You can include shared interfaces/types in a separate file
-// and then use them in any component by importing them. For
-// example, to import the interface below do:
-//
-// import { User } from 'path/to/interfaces';
+export interface CheckoutProps {
+  subTab: number;
+  setSubTab: SetSubTab;
+}
 
-export interface User {
-  id: number;
-  name: string;
+export type MainTab = 'Cart' | 'Checkout';
+
+export interface OrderSummaryProps {
+  subTab: number;
+  mainTab: MainTab;
+  handleNext: () => void;
 }
 
 export interface QuantitySelectorProps {
   value: number;
   onChange?: (value: number) => void;
+}
+
+export interface SetSubTab {
+  (subTab: number): void;
+}
+
+export interface User {
+  id: number;
+  name: string;
 }

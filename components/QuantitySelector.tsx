@@ -25,6 +25,7 @@ const QuantitySelector = ({ value, onChange }: QuantitySelectorProps) => {
         <Image src='/assets/icons/minus.svg' width={20} height={20} />
       </button>
       <input
+        readOnly
         type='number'
         value={state}
         name='quantity'
