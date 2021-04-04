@@ -7,7 +7,7 @@ import { CheckoutProps } from '../interfaces';
 import { subTabs } from '../pages/cart';
 
 const Checkout = ({ subTab, setSubTab }: CheckoutProps) => {
-  const CheckoutPages = [Address, Payment, Shipping];
+  const CheckoutPages = [Address, Shipping, Payment];
 
   return (
     <div className='checkout__page'>

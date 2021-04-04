@@ -1,10 +1,13 @@
 import React from 'react';
+import CustomRadio from './CustomRadio';
 
 const Address = () => {
   return (
     <div className='address__page'>
       <div className='address__item'>
-        <div className='address__item-radio'></div>
+        <div className='address__item-radio'>
+          <CustomRadio name='address' checked />
+        </div>
         <div className='address__item-details'>
           <div className='address__item-head'>
             <p className='address__item-name'>Huzefa Bagwala</p>
@@ -25,7 +28,9 @@ const Address = () => {
         </div>
       </div>
       <div className='address__item'>
-        <div className='address__item-radio'></div>
+        <div className='address__item-radio'>
+          <CustomRadio name='address' />
+        </div>
         <div className='address__item-details'>
           <div className='address__item-head'>
             <p className='address__item-name'>IndiaTech</p>
