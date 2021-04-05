@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Address from './Address';
 import Payment from './Payment';
 import Shipping from './Shipping';
-import { CheckoutProps } from '../interfaces';
 import { subTabs } from '../pages/cart';
+import { CheckoutProps } from '../interfaces';
 
 const Checkout = ({ subTab, setSubTab }: CheckoutProps) => {
   const CheckoutPages = [Address, Shipping, Payment];

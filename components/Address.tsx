@@ -2,11 +2,23 @@ import React from 'react';
 import CustomRadio from './CustomRadio';
 
 const Address = () => {
+  const [selected, setSelected] = React.useState('first');
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setSelected(value);
+  };
+
   return (
     <div className='address__page'>
       <div className='address__item'>
         <div className='address__item-radio'>
-          <CustomRadio name='address' checked />
+          <CustomRadio
+            value='first'
+            name='address'
+            onChange={onChange}
+            checked={selected === 'first'}
+          />
         </div>
         <div className='address__item-details'>
           <div className='address__item-head'>
@@ -29,7 +41,12 @@ const Address = () => {
       </div>
       <div className='address__item'>
         <div className='address__item-radio'>
-          <CustomRadio name='address' />
+          <CustomRadio
+            name='address'
+            value='second'
+            onChange={onChange}
+            checked={selected === 'second'}
+          />
         </div>
         <div className='address__item-details'>
           <div className='address__item-head'>
