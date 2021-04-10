@@ -22,7 +22,7 @@ const Shipping = () => {
           <p className='shipping__page-item-label'>Contact</p>
           <div className='shipping__page-item-input-box'>
             <input
-              type='number'
+              type='string'
               name='contact'
               value={contact}
               className='shipping__page-item-input'

@@ -123,6 +123,12 @@ button {
     color: $red;
   }
 
+  &.primary {
+    color: $green;
+    font-weight: 600;
+    line-height: 1.6rem;
+  }
+
   &.filled {
     width: 20rem;
     color: white;
@@ -132,6 +138,11 @@ button {
     &.danger {
       background-color: $red;
     }
+  }
+
+  &.fit {
+    width: fit-content;
+    height: fit-content;
   }
 }
 
@@ -453,6 +464,10 @@ button {
     width: 1px;
     height: 100%;
   }
+
+  &.page-divider {
+    margin: 3.2rem 0;
+  }
 }
 
 .cart__item {
@@ -639,8 +654,6 @@ button {
 
 .address__page {
   .new__address {
-    margin-top: 3.2rem;
-
     &-button {
       color: $green;
       font-weight: 600;
@@ -846,6 +859,62 @@ button {
 
       &-value {
         margin-left: 3.2rem;
+      }
+    }
+  }
+}
+
+.payment__page {
+  &-header {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .payment__methods {
+    border: 1px solid rgba($dark, 0.2);
+
+    .payment__method {
+      color: $dark;
+      display: flex;
+      font-size: 1.6rem;
+      align-items: center;
+      line-height: 1.6rem;
+      padding-left: 1.8rem;
+
+      &-checkbox {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      &-denomination {
+        margin: 0 1.6rem;
+      }
+
+      &-identifier {
+        display: flex;
+        font-weight: 600;
+        margin-right: 4rem;
+        align-items: center;
+
+        &-dot {
+          font-size: 8px;
+          margin-right: 1px;
+
+          &:last-of-type {
+            margin-right: 8px;
+          }
+        }
+      }
+
+      &-expiry {
+        font-weight: normal;
+        color: rgba($dark, 0.4);
+      }
+
+      &-expiry {
+        margin-right: auto;
       }
     }
   }

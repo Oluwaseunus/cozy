@@ -67,10 +67,8 @@ const Address = () => {
           <button className='danger'>Remove</button>
         </div>
       </div>
-      <div className='divider'></div>
-      <div className='new__address'>
-        <button className='new__address-button'>+ Add New Address</button>
-      </div>
+      <div className='divider page-divider'></div>
+      <button className='primary fit'>+ Add New Address</button>
     </div>
   );
 };
