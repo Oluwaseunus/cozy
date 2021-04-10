@@ -3,13 +3,25 @@ import Image from 'next/image';
 import CustomRadio from './CustomRadio';
 
 const Payment = () => {
+  const [selected, setSelected] = React.useState('first');
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setSelected(value);
+  };
+
   return (
     <div className='payment__page'>
       <h3 className='payment__page-header'>Payment Method</h3>
       <div className='payment__methods'>
         <div className='payment__method'>
           <div className='payment__method-checkbox'>
-            <CustomRadio name='payment' checked />
+            <CustomRadio
+              value='first'
+              name='payment'
+              onChange={onChange}
+              checked={selected === 'first'}
+            />
           </div>
           <div className='payment__method-denomination'>
             <Image src='/assets/icons/visa.svg' width={24} height={17} />
@@ -27,7 +39,12 @@ const Payment = () => {
         <div className='divider'></div>
         <div className='payment__method'>
           <div className='payment__method-checkbox'>
-            <CustomRadio name='payment' />
+            <CustomRadio
+              name='payment'
+              value='second'
+              onChange={onChange}
+              checked={selected === 'second'}
+            />
           </div>
           <div className='payment__method-denomination'>
             <Image src='/assets/icons/mastercard.svg' width={24} height={17} />
